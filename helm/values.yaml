@@ -27,10 +27,17 @@ ingress:
   enabled: true
 
   # -- Specify an ingressClassName
-  ingressClassName: nginx-crt-house
+  ingressClassName: nginx-internal
 
   annotations:
     external-dns.alpha.kubernetes.io/hostname: pihole.crt.house
+    gethomepage.dev/href: https://pihole.crt.house
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/description: Ad Blocker
+    gethomepage.dev/group: Kubernetes
+    gethomepage.dev/icon: pihole
+    gethomepage.dev/name: Pihole
+    gethomepage.dev/pod-selector: ""
 
   path: /
   hosts:
