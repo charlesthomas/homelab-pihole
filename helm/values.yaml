@@ -35,7 +35,7 @@ ingress:
     gethomepage.dev/enabled: "true"
     gethomepage.dev/description: Ad Blocker
     gethomepage.dev/group: Kubernetes
-    gethomepage.dev/icon: pihole
+    gethomepage.dev/icon: pi-hole
     gethomepage.dev/name: Pihole
     gethomepage.dev/pod-selector: ""
 
