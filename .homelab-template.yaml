@@ -1,4 +1,4 @@
-_commit: v1.6.12-9-g8848b96
+_commit: v1.8.1
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: ''
 backups: false
@@ -9,6 +9,9 @@ helmRelease: pihole
 helmRepo: https://mojo2600.github.io/pihole-kubernetes/
 helmValues: helm/values.yaml
 helmVersion: ''
+homepageEnabled: true
+ingHost: pihole.crt.house
+ingName: pihole
 ingress: false
 labels: ''
 name: pihole
