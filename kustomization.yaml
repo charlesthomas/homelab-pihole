@@ -8,10 +8,11 @@ commonAnnotations:
 
 resources:
 - resources/namespaces.yaml
+- resources/configmaps.yaml
+- resources/deployments.yaml
+- resources/external-secrets.yaml
+- resources/ingresses.yaml
+- resources/pvcs.yaml
+- resources/services.yaml
+
 patches:
-helmCharts:
-- name: pihole
-  namespace: pihole
-  releaseName: pihole
-  repo: https://mojo2600.github.io/pihole-kubernetes/
-  valuesFile: helm/values.yaml

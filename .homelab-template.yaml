@@ -2,13 +2,7 @@ _commit: v1.9.0-1-g02b6330
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: ''
 backups: false
-helm: true
-helmCrds: false
-helmName: pihole
-helmRelease: pihole
-helmRepo: https://mojo2600.github.io/pihole-kubernetes/
-helmValues: helm/values.yaml
-helmVersion: ''
+helm: false
 homepageEnabled: false
 ingress: false
 labels: ''
@@ -17,7 +11,13 @@ namespace: pihole
 pvc: false
 reloader: true
 resources:
+- namespaces.yaml
+- configmaps.yaml
+- deployments.yaml
 - external-secrets.yaml
+- ingresses.yaml
+- pvcs.yaml
+- services.yaml
 service: false
 serviceAccount: false
 upstreamURL: https://pi-hole.net

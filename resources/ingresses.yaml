@@ -1,0 +1,32 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pihole
+  labels:
+    app: pihole
+  annotations:
+    external-dns.alpha.kubernetes.io/hostname: pihole.crt.house
+    gethomepage.dev/description: Ad Blocker
+    gethomepage.dev/enabled: "true"
+    gethomepage.dev/group: Tools
+    gethomepage.dev/href: https://pihole.crt.house
+    gethomepage.dev/icon: pi-hole
+    gethomepage.dev/name: Pihole
+    gethomepage.dev/pod-selector: ""
+spec:
+  ingressClassName: nginx-internal
+  tls:
+    - hosts:
+      - pihole.crt.house
+  rules:
+    - host: "pihole.crt.house"
+      http:
+        paths:
+          - path: /
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: release-name-pihole-web
+                port: 
+                  name: http
