@@ -1,4 +1,4 @@
-_commit: v1.9.0-1-g02b6330
+_commit: v1.10.0-1-g2b5f661
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: ''
 backups: false
@@ -11,7 +11,6 @@ namespace: pihole
 pvc: false
 reloader: true
 resources:
-- namespaces.yaml
 - configmaps.yaml
 - deployments.yaml
 - external-secrets.yaml
