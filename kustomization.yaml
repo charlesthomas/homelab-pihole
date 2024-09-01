@@ -7,12 +7,21 @@ commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-pihole
 
 resources:
-- resources/namespaces.yaml
 - resources/configmaps.yaml
 - resources/deployments.yaml
 - resources/external-secrets.yaml
 - resources/ingresses.yaml
+- resources/namespaces.yaml
 - resources/pvcs.yaml
 - resources/services.yaml
-
 patches:
+- patch: |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: all
+      namespace: pihole
+      annotations:
+        reloader.stakater.com/auto: "true"
+  target:
+    kind: Deployment
