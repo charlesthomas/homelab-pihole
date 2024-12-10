@@ -9,6 +9,8 @@ metadata:
 data:
   pihole-FTL.conf: |
     MAXDBDAYS=60
+    PRIVACYLEVEL=3
+    IGNORE_LOCALHOST=yes
 ---
 apiVersion: v1
 kind: ConfigMap
