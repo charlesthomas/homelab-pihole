@@ -6,6 +6,11 @@ namespace: pihole
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-pihole
 
+images:
+  - name: pihole
+    newName: pihole/pihole
+    newTag: 2024.07.0
+
 resources:
 - resources/configmaps.yaml
 - resources/deployments.yaml
@@ -14,6 +19,7 @@ resources:
 - resources/namespaces.yaml
 - resources/pvcs.yaml
 - resources/services.yaml
+
 patches:
 - patch: |-
     apiVersion: apps/v1
