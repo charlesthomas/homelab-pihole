@@ -9,10 +9,10 @@ metadata:
     external-dns.alpha.kubernetes.io/hostname: pihole.crt.house
     gethomepage.dev/description: Ad Blocker
     gethomepage.dev/enabled: "true"
-    gethomepage.dev/group: Kubernetes
+    gethomepage.dev/group: Pi-hole
     gethomepage.dev/href: https://pihole.crt.house
     gethomepage.dev/icon: pi-hole
-    gethomepage.dev/name: Pihole
+    gethomepage.dev/name: Pi-hole
     gethomepage.dev/pod-selector: ""
 spec:
   ingressClassName: nginx-internal
