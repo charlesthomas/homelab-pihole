@@ -22,5 +22,7 @@ metadata:
 data:
   02-custom.conf: |
     addn-hosts=/etc/addn-hosts
+    # root KSK-2024; pihole v5 only ships the KSK-2017 (20326) anchor
+    trust-anchor=.,38696,8,2,683D2D0ACB8C9B712A1948B27F741219298D0A450D612C483AF444A4C0FB2B16
   addn-hosts: |
   05-pihole-custom-cname.conf: |
