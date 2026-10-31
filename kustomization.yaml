@@ -31,3 +31,11 @@ patches:
         reloader.stakater.com/auto: "true"
   target:
     kind: Deployment
+configMapGenerator:
+- name: grafana-dashboard-pihole
+  files:
+  - grafana/pihole.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
